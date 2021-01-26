@@ -1,4 +1,5 @@
 <?php
+//change host when going live
 $host = "localhost";
 $user = "root";
 $password = "";
