@@ -1,3 +1,4 @@
+<?php include ("partials/dbconnect.php")  ?>
 <!-- Header -->
 <header>
   <!-- Header desktop -->
