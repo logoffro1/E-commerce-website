@@ -34,7 +34,19 @@ include ("adminpartials/head.php");
 
     <!-- Main content -->
     <section class="content">
+<div class ="row">
+  <div class="col-sm-9">
+  <a href = "products.php">
+<button style="color:green">Add Products</button>
+<hr>
 
+</a>
+<a href = "Categories.php">
+<button style="color:green">Add Categories</button>
+<hr>
+
+</a>
+</div>
     </section>
     <!-- /.content -->
   </div>
