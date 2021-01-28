@@ -8,63 +8,25 @@
         </h4>
 
         <ul>
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Women
-            </a>
-          </li>
+          <?php
+          include ("partials/dbconnect.php");
+          $query = "SELECT * FROM categories";
 
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Men
-            </a>
-          </li>
+          $results = $connect -> query($query);
 
+          while($final = $results->fetch_assoc()){
+$name = $final['name'];
+           ?>
           <li class="p-b-10">
             <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Shoes
+              <?php echo htmlentities($name); ?>
             </a>
           </li>
-
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Watches
-            </a>
-          </li>
+<?php } ?>
         </ul>
       </div>
 
-      <div class="col-sm-6 col-lg-3 p-b-50">
-        <h4 class="stext-301 cl0 p-b-30">
-          Help
-        </h4>
 
-        <ul>
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Track Order
-            </a>
-          </li>
-
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Returns
-            </a>
-          </li>
-
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              Shipping
-            </a>
-          </li>
-
-          <li class="p-b-10">
-            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
-              FAQs
-            </a>
-          </li>
-        </ul>
-      </div>
 
       <div class="col-sm-6 col-lg-3 p-b-50">
         <h4 class="stext-301 cl0 p-b-30">
@@ -72,41 +34,21 @@
         </h4>
 
         <p class="stext-107 cl7 size-201">
-          Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+          Any questions? Let us know in store at Bijdorplaan 15, 2015 CE Haarlem or call us on (+3) 063 620 0953
         </p>
 
         <div class="p-t-27">
-          <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-            <i class="fa fa-facebook"></i>
+          <a href="https://www.linkedin.com/in/cosminilie2704/" target="_blank" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+            <i class="fa fa-linkedin"></i>
           </a>
 
-          <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-            <i class="fa fa-instagram"></i>
-          </a>
-
-          <a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
-            <i class="fa fa-pinterest-p"></i>
+          <a href="https://github.com/logoffro1" target="_blank"class="fs-18 cl7 hov-cl1 trans-04 m-r-16">
+            <i class="fa fa-github"></i>
           </a>
         </div>
       </div>
 
       <div class="col-sm-6 col-lg-3 p-b-50">
-        <h4 class="stext-301 cl0 p-b-30">
-          Newsletter
-        </h4>
-
-        <form>
-          <div class="wrap-input1 w-full p-b-4">
-            <input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email" placeholder="email@example.com">
-            <div class="focus-input1 trans-04"></div>
-          </div>
-
-          <div class="p-t-18">
-            <button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-              Subscribe
-            </button>
-          </div>
-        </form>
       </div>
     </div>
 

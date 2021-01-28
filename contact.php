@@ -51,7 +51,7 @@ include ("partials/header.php");
 							</span>
 
 							<p class="stext-115 cl6 size-213 p-t-18">
-								Coza Store Center 8th floor, 379 Hudson St, New York, NY 10018 US
+								Bijdorplaan 15, 2015 CE Haarlem
 							</p>
 						</div>
 					</div>
@@ -67,7 +67,7 @@ include ("partials/header.php");
 							</span>
 
 							<p class="stext-115 cl1 size-213 p-t-18">
-								+1 800 1236879
+								(+3) 063 620 0953
 							</p>
 						</div>
 					</div>
@@ -83,7 +83,7 @@ include ("partials/header.php");
 							</span>
 
 							<p class="stext-115 cl1 size-213 p-t-18">
-								contact@example.com
+								645976@student.inholland.nl
 							</p>
 						</div>
 					</div>

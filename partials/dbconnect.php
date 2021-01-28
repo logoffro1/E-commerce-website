@@ -7,5 +7,4 @@ $dbname = "ecommerce";
 
 $connect = mysqli_connect($host,$user,$password,$dbname);
 
-
  ?>
