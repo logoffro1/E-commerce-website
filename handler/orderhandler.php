@@ -3,9 +3,9 @@ session_start();
 include ("../partials/dbconnect.php");
 
 $total = $_POST['total'];
-$phone = $_POST['phone'];
+$phone = mysqli_real_escape_string($connect,$_POST['phone']);
 
-$address = $_POST['address'];
+$address = mysqli_real_escape_string($connect,$_POST['address']);
 $customerid = $_SESSION['customerid'];
 
 $query = "INSERT INTO orders (customer_id,address,phone,total) VALUES('$customerid','$address','$phone','$total');";
@@ -13,9 +13,14 @@ $query = "INSERT INTO orders (customer_id,address,phone,total) VALUES('$customer
 $connect -> query($query);
 
 $query2 = "SELECT id FROM orders order by id DESC limit 1;";
-$result=$connect -> query($query2);
+try{
+  $result=$connect -> query($query2);
 
-$final = $result -> fetch_assoc();
+  $final = $result -> fetch_assoc();
+}catch(Exception $e){
+header("location: ../cart.php");
+}
+
 $orderid = $final['id'];
 
 

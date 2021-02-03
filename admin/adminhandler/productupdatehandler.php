@@ -4,10 +4,10 @@ include ("../../partials/dbconnect.php");
 if(isset($_POST['update']))
 {
   $new_id = $_POST['form_id'];
-  $new_name = $_POST['name'];
-  $new_price = $_POST['price'];
-  $new_description = $_POST['description'];
-  $new_category = $_POST['category'];
+  $new_name = mysqli_real_escape_string($connect,$_POST['name']);
+  $new_price = mysqli_real_escape_string($connect,$_POST['price']);
+  $new_description = mysqli_real_escape_string($connect,$_POST['description']);
+  $new_category = mysqli_real_escape_string($connect,$_POST['category']);
 
 
   $target = "uploads/";

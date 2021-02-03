@@ -26,8 +26,9 @@ include ("partials/header.php");
 									<th class="column-5"></th>
 								</tr>
 <?php
-if (isset($_SESSION['cart'])) {
 	$total = 0;
+if (isset($_SESSION['cart'])) {
+
 	foreach ($_SESSION['cart'] as $key => $value) {
 $total+=$value['item_price']*$value['quantity'];
 

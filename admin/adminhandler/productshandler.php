@@ -1,9 +1,9 @@
 <?php
 require ("../../partials/dbconnect.php");
-$product = $_POST['name'];
-$price = $_POST['price'];
-$description = $_POST['description'];
-$category = $_POST['category'];
+$product = mysqli_real_escape_string($connect,$_POST['name']);
+$price = mysqli_real_escape_string($connect,$_POST['price']);
+$description = mysqli_real_escape_string($connect,$_POST['description']);
+$category = mysqli_real_escape_string($connect,$_POST['category']);
 
 $target = "uploads/";
 $file_name = $_FILES['picture']['name'];

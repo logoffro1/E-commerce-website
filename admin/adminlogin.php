@@ -4,11 +4,18 @@ session_start();
 include ("adminpartials/head.php");
 if(isset($_POST['login'])){
   require("../partials/dbconnect.php");
-$username = $_POST['username'];
-$password = $_POST['password'];
+$username = mysqli_real_escape_string($connect,$_POST['username']);
+$password = mysqli_real_escape_string($connect,$_POST['password']);
 $query = "SELECT * FROM admins WHERE username='$username' AND password ='$password'";
-$results = $connect -> query($query);
-$final = $results -> fetch_assoc();
+try{
+  $results = $connect -> query($query);
+  $final = $results -> fetch_assoc();
+} catch(Exception $e){
+  echo "<script> alert('Wrong username or password');
+window.location.href='adminlogin.php';
+</script>";
+}
+
 
 $_SESSION['username'] = $final['username'];
 $_SESSION['password'] = $final['password'];

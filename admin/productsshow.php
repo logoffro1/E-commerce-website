@@ -54,11 +54,7 @@ while($final = $results -> fetch_assoc()){ ?>
 </a> <hr>
 <?php }
   ?>
-
-
         </div>
-
-
     <div class = "col-sm-3">
     </div>
     </section>
