@@ -1,5 +1,5 @@
 <?php
-
+//test
 $host = "localhost";
 $user = "u9902570_cosminphp";
 $password = "g!e]~s0@xXCy";
