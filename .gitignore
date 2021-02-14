@@ -5,3 +5,5 @@
 /admin/pages
 /admin/plugins
 /admin/build
+/admin/docs
+/admin/dist
