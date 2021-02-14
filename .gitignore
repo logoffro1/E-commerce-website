@@ -2,3 +2,6 @@
 /vendor
 /css
 /fonts
+/admin/pages
+/admin/plugins
+/admin/build
